@@ -20,7 +20,6 @@ import JsonData3 from '../layout/data/data_it.json';
 import JsonData4 from '../layout/data/data_pt.json';
 import JsonData5 from '../layout/data/data_es.json';
 
-import Media from 'react-media';
 import { useMediaQuery } from "@material-ui/core";
 
 var prev1 = "4";
@@ -259,7 +258,7 @@ const Tool = (props) => {
 
       <LeftEye
         top={200}
-        left={50}
+        left={respon ? 50 : 180}
         width={700}
         height={700}
         rotateAngle={0}
@@ -274,7 +273,7 @@ const Tool = (props) => {
 
       <RightEye
         top={respon ? 200 : 1200}
-        left={respon ? 1170 : 50}
+        left={respon ? 1170 : 180}
         width={700}
         height={700}
         rotateAngle={0}
@@ -292,7 +291,7 @@ const Tool = (props) => {
           <div className="compare-box">
             <Ruler1
               top={respon ? 220 : 770}
-              left={respon ? 770 : 200}
+              left={respon ? 770 : 330}
               width={180}
               height={180}
               rotateAngle={0}
@@ -303,7 +302,7 @@ const Tool = (props) => {
             </Ruler1>
             <Ruler2
               top={respon ? 220 : 770}
-              left={respon ? 970 : 420}
+              left={respon ? 970 : 550}
               width={180}
               height={180}
               rotateAngle={0}
@@ -314,7 +313,7 @@ const Tool = (props) => {
             </Ruler2>
             <Ruler3
               top={respon ? 450 : 1000}
-              left={respon ? 770 : 200}
+              left={respon ? 770 : 330}
               width={180}
               height={180}
               rotateAngle={0}
@@ -325,7 +324,7 @@ const Tool = (props) => {
             </Ruler3>
             <Ruler4
               top={respon ? 450 : 1000}
-              left={respon ? 970 : 420}
+              left={respon ? 970 : 550}
               width={180}
               height={180}
               rotateAngle={0}
@@ -336,7 +335,7 @@ const Tool = (props) => {
             </Ruler4>
             <Ruler5
               top={respon ? 680 : 1230}
-              left={respon ? 770 : 200}
+              left={respon ? 770 : 330}
               width={180}
               height={180}
               rotateAngle={0}
@@ -347,7 +346,7 @@ const Tool = (props) => {
             </Ruler5>
             <Ruler6
               top={respon ? 680 : 1230}
-              left={respon ? 770 : 200}
+              left={respon ? 770 : 330}
               width={180}
               height={180}
               rotateAngle={0}
@@ -361,7 +360,7 @@ const Tool = (props) => {
             <div>
               <Ruler1
                 top={respon ? 300 : 850}
-                left={respon ? 770 : 200}
+                left={respon ? 770 : 330}
                 width={180}
                 height={180}
                 rotateAngle={0}
@@ -372,7 +371,7 @@ const Tool = (props) => {
               </Ruler1>
               <Ruler3
                 top={respon ? 600 : 1150}
-                left={respon ? 770 : 200}
+                left={respon ? 770 : 330}
                 width={180}
                 height={180}
                 rotateAngle={0}
@@ -383,7 +382,7 @@ const Tool = (props) => {
               </Ruler3>
               <Ruler4
                 top={respon ? 600 : 1150}
-                left={respon ? 970 : 420}
+                left={respon ? 970 : 550}
                 width={180}
                 height={180}
                 rotateAngle={0}
@@ -394,7 +393,7 @@ const Tool = (props) => {
               </Ruler4>
               <Ruler5
                 top={respon ? 300 : 850}
-                left={respon ? 970 : 420}
+                left={respon ? 970 : 550}
                 width={180}
                 height={180}
                 rotateAngle={0}
@@ -408,7 +407,7 @@ const Tool = (props) => {
               <Ruler4
                 style={{ zIndex: "10" }}
                 top={respon ? 400 : 950}
-                left={respon ? 970 : 420}
+                left={respon ? 970 : 550}
                 width={180}
                 height={180}
                 rotateAngle={0}
@@ -419,7 +418,7 @@ const Tool = (props) => {
               </Ruler4>
               <Ruler1
                 top={respon ? 400 : 950}
-                left={respon ? 770 : 200}
+                left={respon ? 770 : 330}
                 width={180}
                 height={180}
                 rotateAngle={0}

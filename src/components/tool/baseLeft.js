@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import ResizableRect from 'react-resizable-rotatable-draggable'
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const BaseLeft = props => {
 
@@ -28,7 +28,7 @@ const BaseLeft = props => {
     setHeight(Math.round(height))
     setTop(Math.round(top))
     setLeft(Math.round(left))
-    dispatch({type: 'CHANGE_WIDTHLEFT', payload: width})
+    dispatch({ type: 'CHANGE_WIDTHLEFT', payload: width })
     console.log(patient.widthLeft)
   }
 
@@ -46,6 +46,22 @@ const BaseLeft = props => {
 
     console.log("wwwlwlwlwlwllwlwlwlwlw")
   }
+
+  useEffect(() => {
+    if (top != props.top) {
+      setTop(props.top)
+    }
+    if (left != props.left) {
+      setLeft(props.left)
+    }
+    if (width != props.width) {
+      setWidth(props.width)
+    }
+    if (height != props.height) {
+      setHeight(props.height)
+    }
+
+  }, [props.top, props.left, props.width, props.height])
 
   return (
     <Fragment>
